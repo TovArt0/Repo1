@@ -14,11 +14,12 @@ namespace Repoq
             string tmp;
             string pause;
             Console.WriteLine("Введите число:");
+
             tmp = Console.ReadLine();
             year = Convert.ToInt32(tmp);
             Console.WriteLine($"Введенный год: {year}");
 
-            if (year % 4 == 0)
+            if ((year % 4 == 0) && !(year % 100 == 0 && year % 400 != 0))
             {
                 Console.WriteLine("Год високосный");
             }
@@ -26,8 +27,9 @@ namespace Repoq
             {
                 Console.WriteLine("Год не високосный");
             }
-
+            Console.WriteLine("Конец");
             pause = Console.ReadLine();
+
 
 
 
